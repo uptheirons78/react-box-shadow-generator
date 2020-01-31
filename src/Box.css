@@ -1,0 +1,22 @@
+.box {
+  width: 370px;
+  height: 380px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__property-container {
+  width: 80%;
+  height: 40%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__property-container-text {
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+}
