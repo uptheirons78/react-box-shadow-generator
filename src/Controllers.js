@@ -1,7 +1,7 @@
 import React from "react";
 import "./Controllers.css";
 
-const Controllers = () => {
+const Controllers = ({ values, handleChange }) => {
   return (
     <div className="controllers-container">
       <div className="controllers-container__inside-wrapper">
@@ -15,9 +15,9 @@ const Controllers = () => {
           id="hw"
           min="-200"
           max="200"
-          value="10"
+          value={values.hw}
           step="1"
-          onChange={e => console.log(e)}
+          onChange={handleChange}
         />
         <label htmlFor="vl">Vertical Length</label>
         <input
@@ -26,9 +26,9 @@ const Controllers = () => {
           id="vl"
           min="-200"
           max="200"
-          value="10"
+          value={values.vl}
           step="1"
-          onChange={e => console.log(e)}
+          onChange={handleChange}
         />
         <label htmlFor="br">Blur Radius</label>
         <input
