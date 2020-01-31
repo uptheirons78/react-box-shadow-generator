@@ -37,9 +37,9 @@ const Controllers = ({ values, handleChange }) => {
           id="br"
           min="0"
           max="300"
-          value="5"
+          value={values.br}
           step="1"
-          onChange={e => console.log(e)}
+          onChange={handleChange}
         />
         <label htmlFor="sr">Spread Radius</label>
         <input
@@ -48,9 +48,9 @@ const Controllers = ({ values, handleChange }) => {
           id="sr"
           min="-200"
           max="200"
-          value="0"
+          value={values.sr}
           step="1"
-          onChange={e => console.log(e)}
+          onChange={handleChange}
         />
       </div>
       <div className="controllers-container__inside-wrapper">
@@ -62,16 +62,16 @@ const Controllers = ({ values, handleChange }) => {
           type="color"
           name="sc"
           id="sc"
-          value="#ff435f"
-          onChange={e => console.log(e)}
+          value={values.sc}
+          onChange={handleChange}
         />
         <label htmlFor="bxc">Box Color</label>
         <input
           type="color"
           name="bxc"
           id="bxc"
-          value="#ff435f"
-          onChange={e => console.log(e)}
+          value={values.bxc}
+          onChange={handleChange}
         />
         <label htmlFor="sr">Opacity</label>
         <input
@@ -80,9 +80,9 @@ const Controllers = ({ values, handleChange }) => {
           id="opacity"
           min="0"
           max="1"
-          value="0.75"
+          value={values.opacity}
           step="0.05"
-          onChange={e => console.log(e)}
+          onChange={handleChange}
         />
       </div>
     </div>
