@@ -127,7 +127,7 @@ label {
 
 /* CheckBox Styles */
 .onoffswitch {
-    position: relative; width: 86px;
+    position: relative; width: 120px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -135,35 +135,34 @@ label {
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid var(--secondary-color); border-radius: 0px;
+    border: 2px solid #484D4D; border-radius: 0px;
 }
 .onoffswitch-inner {
     display: block; width: 200%; margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 24px; padding: 0; line-height: 20px;
-    font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    display: block; float: left; width: 50%; height: 35px; padding: 0; line-height: 35px;
+    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     box-sizing: border-box;
-    border: 2px solid transparent;
-    background-clip: padding-box;
 }
 .onoffswitch-inner:before {
     content: "ON";
-    padding-left: 12px;
-    background-color: var(--secondary-color); color: #FFFFFF;
+    padding-left: 15px;
+    background-color: #484D4D; color: #FF435F;
 }
 .onoffswitch-inner:after {
     content: "OFF";
-    padding-right: 12px;
-    background-color: var(--secondary-color); color: var(--secondary-color);
+    padding-right: 15px;
+    background-color: #484D4D; color: #FF435F;
     text-align: right;
 }
 .onoffswitch-switch {
-    display: block; width: 31px; margin: 0px;
-    background: var(--secondary-color);
+    display: block; width: 16px; margin: 9.5px;
+    background: #FF435F;
     position: absolute; top: 0; bottom: 0;
-    right: 55px;
+    right: 81px;
+    border: 2px solid #484D4D; border-radius: 0px;
     transition: all 0.3s ease-in 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
@@ -171,5 +170,5 @@ label {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
-    background-color: var(--primary-color);
 }
+

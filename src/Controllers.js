@@ -1,7 +1,7 @@
 import React from "react";
 import "./Controllers.css";
 
-const Controllers = ({ values, handleChange }) => {
+const Controllers = ({ values, handleChange, handleInset }) => {
   return (
     <div className="controllers-container">
       <div className="controllers-container__inside-wrapper">
@@ -84,6 +84,27 @@ const Controllers = ({ values, handleChange }) => {
           step="0.05"
           onChange={handleChange}
         />
+      </div>
+      <div className="controllers-container__inside-wrapper">
+        <h3 className="controllers-container__inside-wrapper-title">
+          Outline or Inset
+        </h3>
+        <label htmlFor="inset">Inset</label>
+        {/* <input type="checkbox" name="inset" id="inset" onChange={handleInset} /> */}
+
+        <div className="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch"
+            className="onoffswitch-checkbox"
+            id="myonoffswitch"
+            onChange={handleInset}
+          />
+          <label className="onoffswitch-label" htmlFor="myonoffswitch">
+            <span className="onoffswitch-inner"></span>
+            <span className="onoffswitch-switch"></span>
+          </label>
+        </div>
       </div>
     </div>
   );

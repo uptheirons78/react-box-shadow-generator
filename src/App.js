@@ -14,18 +14,30 @@ function App() {
     opacity: "0.75" // opacity
   });
 
+  const [inset, setInset] = useState(false);
+
   const handleChange = event => {
     setValues({ ...values, [event.target.id]: event.target.value });
   };
+
+  const handleInset = event => {
+    setInset(event.target.checked);
+  };
+
   return (
     <div className="app">
       <h1 className="app-title">React Box Shadow Generator</h1>
       <section className="app-wrapper">
         <section className="controllers-section">
-          <Controllers values={values} handleChange={handleChange} />
+          <Controllers
+            values={values}
+            handleChange={handleChange}
+            inset={inset}
+            handleInset={handleInset}
+          />
         </section>
         <section className="box-section">
-          <Box values={values} />
+          <Box values={values} inset={inset} />
         </section>
       </section>
     </div>
