@@ -23,3 +23,11 @@
 .box-message {
   color: #FFF;
 }
+
+@media screen and (max-width: 800px) {
+  .box {
+  margin-top: 3rem;
+  width: 340px;
+  height: 360px;
+}
+}
